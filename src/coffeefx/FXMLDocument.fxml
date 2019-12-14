@@ -16,16 +16,16 @@
             <Image url="@../image/home.png" />
          </image>
       </ImageView>
-      <PasswordField id="textbox" layoutX="541.0" layoutY="449.0" prefHeight="30.0" prefWidth="270.0">
+      <PasswordField id="textbox" fx:id="txt_password" layoutX="541.0" layoutY="449.0" prefHeight="30.0" prefWidth="270.0">
          <font>
             <Font size="14.0" />
          </font></PasswordField>
-      <TextField id="textbox" layoutX="541.0" layoutY="395.0" prefHeight="30.0" prefWidth="270.0">
+      <TextField id="textbox" fx:id="txt_username" layoutX="541.0" layoutY="395.0" prefHeight="30.0" prefWidth="270.0">
          <font>
             <Font size="15.0" />
          </font></TextField>
-        <Label fx:id="label" layoutX="26.0" layoutY="514.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="86.0" />
-        <Button id="button" fx:id="button" layoutX="502.0" layoutY="501.0" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="317.0" text="Login" textFill="WHITE">
+        <Label fx:id="label" layoutX="31.0" layoutY="548.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="86.0" />
+        <Button id="button" fx:id="button1" layoutX="502.0" layoutY="501.0" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="317.0" text="Login" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>

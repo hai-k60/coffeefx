@@ -106,3 +106,7 @@ and open the template in the editor.
     -fx-graphic: url("../image/report.png");
     -fx-padding: 0 0 0 10;
 }
+
+#hide_button{
+    -fx-background-color: none;
+}

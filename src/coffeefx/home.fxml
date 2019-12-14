@@ -28,7 +28,9 @@
                </font>
             </Label>
             <Button id="hide_button" fx:id="btn_logout" layoutX="719.0" layoutY="5.0" mnemonicParsing="false" onAction="#onClickLogout" prefHeight="40.0" prefWidth="76.0">
-               </Button>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
          </children>
       </Pane>
       <Pane id="taskbar" layoutY="50.0" prefHeight="500.0" prefWidth="210.0">
@@ -45,7 +47,7 @@
             <Label id="btn_storage" layoutX="5.0" layoutY="275.0" prefHeight="40.0" prefWidth="200.0" text="Storage" />
             <Label id="btn_report" layoutX="5.0" layoutY="320.0" prefHeight="40.0" prefWidth="200.0" text="Report" />
             <Button id="hide_button" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" />
-            <Button id="hide_button" layoutX="5.0" layoutY="50.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0">
+            <Button id="hide_button" fx:id="btn_order" layoutX="5.0" layoutY="50.0" mnemonicParsing="false" onAction="#onClickOrder" prefHeight="40.0" prefWidth="200.0">
               </Button>
             <Button id="hide_button" layoutX="5.0" layoutY="95.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0">
                </Button>

@@ -55,9 +55,9 @@ public class HomeController implements Initializable {
 //    private void onClickHome(ActionEvent event) {
 //    }
 //    
-//    @FXML
-//    private void onClickOrder(ActionEvent event) {
-//    }
+    @FXML
+    private void onClickOrder(ActionEvent event) {
+    }
 //    
 //    @FXML
 //    private void onClickMenu(ActionEvent event) {
