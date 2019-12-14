@@ -15,8 +15,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 /**
@@ -26,9 +30,12 @@ import javafx.stage.Stage;
  */
 public class HomeController implements Initializable {
     
-//    @FXML
-//    private Label btn_logout;
+    @FXML
+    private Pane panel_main;
 //    
+//    @FXML
+//    private GridPane panel_main;
+    
     @FXML
     private void onClickLogout(ActionEvent event){
         System.out.println("Log out");
@@ -56,13 +63,19 @@ public class HomeController implements Initializable {
 //    }
 //    
     @FXML
-    private void onClickOrder(ActionEvent event) {
+    private void onClickOrder(ActionEvent event) throws IOException {
+        Pane root = FXMLLoader.load(getClass().getResource("panelorder.fxml"));
+        panel_main.getChildren().setAll(root);
+        System.out.println("load form order");
     }
-//    
-//    @FXML
-//    private void onClickMenu(ActionEvent event) {
-//    }
-//    
+    
+    @FXML
+    private void onClickMenu(ActionEvent event) throws IOException {
+        Pane root = FXMLLoader.load(getClass().getResource("panelmenu.fxml"));
+        panel_main.getChildren().setAll(root);
+        System.out.println("load form menu");
+    }
+    
 //    @FXML
 //    private void onClickEmployees(ActionEvent event) {
 //    }
