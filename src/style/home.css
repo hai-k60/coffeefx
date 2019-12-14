@@ -1,0 +1,108 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 4, 2019, 1:56:33 PM
+    Author     : MyPC
+*/
+#mainpane{
+    -fx-background-color: white;
+}
+#header{
+   -fx-background-color: rgb(51,51,51);
+}
+
+#taskbar{
+    -fx-background-color: rgb(200,200,200);
+}
+
+#coffee{
+    -fx-text-fill: rgb(127,177,75);
+}
+
+#kstn{
+    -fx-graphic: url("../image/leaf.png");
+}
+
+#btn_taskbar{
+    -fx-background-color: rgb(180,180,180);
+    -fx-font-weight: bold;
+    -fx-font-size:12;
+    -fx-font-family: Tahoma;
+    -fx-graphic: url("../image/leaf.png");
+    -fx-padding: 0 0 0 10;
+}
+
+#btn_home{
+    -fx-background-color: rgb(180,180,180);
+    -fx-font-weight: bold;
+    -fx-font-size:12;
+    -fx-font-family: Tahoma;
+    -fx-graphic: url("../image/ihome.png");
+    -fx-padding: 0 0 0 10;
+}
+
+#btn_order{
+    -fx-background-color: rgb(180,180,180);
+    -fx-font-weight: bold;
+    -fx-font-size:12;
+    -fx-font-family: Tahoma;
+    -fx-graphic: url("../image/order.png");
+    -fx-padding: 0 0 0 10;
+}
+
+#btn_menu{
+    -fx-background-color: rgb(180,180,180);
+    -fx-font-weight: bold;
+    -fx-font-size:12;
+    -fx-font-family: Tahoma;
+    -fx-graphic: url("../image/menu.png");
+    -fx-padding: 0 0 0 10;
+}
+
+#btn_employee{
+    -fx-background-color: rgb(180,180,180);
+    -fx-font-weight: bold;
+    -fx-font-size:12;
+    -fx-font-family: Tahoma;
+    -fx-graphic: url("../image/employee.png");
+    -fx-padding: 0 0 0 10;
+}
+
+#btn_customer{
+    -fx-background-color: rgb(180,180,180);
+    -fx-font-weight: bold;
+    -fx-font-size:12;
+    -fx-font-family: Tahoma;
+    -fx-graphic: url("../image/customer.png");
+    -fx-padding: 0 0 0 10;
+}
+
+#btn_storage{
+    -fx-background-color: rgb(180,180,180);
+    -fx-font-weight: bold;
+    -fx-font-size:12;
+    -fx-font-family: Tahoma;
+    -fx-graphic: url("../image/storage.png");
+    -fx-padding: 0 0 0 10;
+}
+
+#btn_material{
+    -fx-background-color: rgb(180,180,180);
+    -fx-font-weight: bold;
+    -fx-font-size:12;
+    -fx-font-family: Tahoma;
+    -fx-graphic: url("../image/material.png");
+    -fx-padding: 0 0 0 10;
+}
+
+#btn_report{
+    -fx-background-color: rgb(180,180,180);
+    -fx-font-weight: bold;
+    -fx-font-size:12;
+    -fx-font-family: Tahoma;
+    -fx-graphic: url("../image/report.png");
+    -fx-padding: 0 0 0 10;
+}
