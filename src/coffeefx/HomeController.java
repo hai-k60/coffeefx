@@ -73,14 +73,20 @@ public class HomeController implements Initializable {
         System.out.println("load form menu");
     }
     
-//    @FXML
-//    private void onClickEmployees(ActionEvent event) {
-//    }
-//    
-//    @FXML
-//    private void onClickCustomer(ActionEvent event) {
-//    }
-//    
+    @FXML
+    private void onClickEmployee(ActionEvent event) throws IOException {
+        Pane root = FXMLLoader.load(getClass().getResource("panelemployee.fxml"));
+        panel_main.getChildren().setAll(root);
+        System.out.println("load form employee");
+    }
+    
+    @FXML
+    private void onClickCustomer(ActionEvent event) throws IOException {
+        Pane root = FXMLLoader.load(getClass().getResource("panelcustomer.fxml"));
+        panel_main.getChildren().setAll(root);
+        System.out.println("load form customer");
+    }
+    
 //    @FXML
 //    private void onClickMaterials(ActionEvent event){
 //    }
@@ -89,9 +95,12 @@ public class HomeController implements Initializable {
 //    private void onClickStorage(ActionEvent event){
 //    }
 //    
-//    @FXML
-//    private void onClickReport(ActionEvent event){
-//    }
+    @FXML
+    private void onClickReport(ActionEvent event) throws IOException{
+        Pane root = FXMLLoader.load(getClass().getResource("panelreport.fxml"));
+        panel_main.getChildren().setAll(root);
+        System.out.println("load form report");
+    }
     /**
      * Initializes the controller class.
      */

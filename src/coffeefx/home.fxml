@@ -48,15 +48,15 @@
               </Button>
             <Button id="hide_button" fx:id="btn_menu" layoutX="5.0" layoutY="95.0" mnemonicParsing="false" onAction="#onClickMenu" prefHeight="40.0" prefWidth="200.0">
                </Button>
-            <Button id="hide_button" layoutX="5.0" layoutY="140.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0">
+            <Button id="hide_button" fx:id="btn_employee" layoutX="5.0" layoutY="140.0" mnemonicParsing="false" onAction="#onClickEmployee" prefHeight="40.0" prefWidth="200.0">
                </Button>
-            <Button id="hide_button" layoutX="5.0" layoutY="185.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0">
+            <Button id="hide_button" fx:id="btn_customer" layoutX="5.0" layoutY="185.0" mnemonicParsing="false" onAction="#onClickCustomer" prefHeight="40.0" prefWidth="200.0">
                </Button>
             <Button id="hide_button" layoutX="5.0" layoutY="230.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0">
                </Button>
             <Button id="hide_button" layoutX="5.0" layoutY="275.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0">
                </Button>
-            <Button id="hide_button" layoutX="5.0" layoutY="320.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0">
+            <Button id="hide_button" fx:id="btn_report" layoutX="5.0" layoutY="320.0" mnemonicParsing="false" onAction="#onClickReport" prefHeight="40.0" prefWidth="200.0">
                </Button>
          </children>
       </Pane>

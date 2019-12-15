@@ -15,7 +15,7 @@
          <font>
             <Font name="System Bold" size="27.0" />
          </font></Label>
-      <Button layoutX="293.0" layoutY="85.0" mnemonicParsing="false" onAction="#hello" prefHeight="25.0" prefWidth="70.0" text="Check" />
+      <Button id="btn-dark" layoutX="293.0" layoutY="84.0" mnemonicParsing="false" onAction="#hello" prefHeight="25.0" prefWidth="70.0" text="Check" />
       <Label id="line" layoutX="20.0" layoutY="48.0" prefHeight="3.0" prefWidth="545.0">
          <font>
             <Font size="1.0" />
@@ -26,7 +26,7 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="30.0" layoutY="158.0" text="Danh sách order">
+      <Label layoutX="30.0" layoutY="155.0" text="Danh sách order">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -39,7 +39,7 @@
       <TextField layoutX="118.0" layoutY="115.0" prefHeight="25.0" prefWidth="160.0" />
       <TextField layoutX="471.0" layoutY="85.0" prefHeight="25.0" prefWidth="70.0" />
       <TextField layoutX="471.0" layoutY="115.0" prefHeight="25.0" prefWidth="70.0" />
-      <Button layoutX="293.0" layoutY="115.0" mnemonicParsing="false" onAction="#hello" prefHeight="25.0" prefWidth="70.0" text="Create" />
+      <Button id="btn-dark" layoutX="293.0" layoutY="114.0" mnemonicParsing="false" onAction="#hello" prefHeight="25.0" prefWidth="70.0" text="Create" />
       <TableView layoutX="31.0" layoutY="274.0" prefHeight="196.0" prefWidth="534.0">
         <columns>
           <TableColumn prefWidth="75.0" text="Tên đồ uống" />
@@ -48,16 +48,16 @@
       </TableView>
       <Label layoutX="30.0" layoutY="177.0" prefHeight="25.0" text="Mã đơn hàng" />
       <TextField layoutX="118.0" layoutY="177.0" prefHeight="25.0" prefWidth="160.0" />
-      <Label layoutX="32.0" layoutY="209.0" prefHeight="25.0" text="Chọn đồ uống" />
-      <ComboBox layoutX="118.0" layoutY="209.0" prefHeight="25.0" prefWidth="160.0" />
-      <Label layoutX="32.0" layoutY="238.0" prefHeight="25.0" text="Số lượng" />
-      <TextField layoutX="120.0" layoutY="238.0" prefHeight="25.0" prefWidth="84.0" />
-      <Button layoutX="208.0" layoutY="238.0" mnemonicParsing="false" onAction="#hello" prefHeight="25.0" prefWidth="70.0" text="Add" />
-      <Label layoutX="338.0" layoutY="238.0" prefHeight="25.0" text="Tổng tiền" />
-      <TextField layoutX="410.0" layoutY="238.0" prefHeight="25.0" prefWidth="84.0" />
+      <Label layoutX="32.0" layoutY="207.0" prefHeight="25.0" text="Chọn đồ uống" />
+      <ComboBox layoutX="118.0" layoutY="207.0" prefHeight="25.0" prefWidth="160.0" />
+      <Label layoutX="32.0" layoutY="237.0" prefHeight="25.0" text="Số lượng" />
+      <TextField layoutX="120.0" layoutY="237.0" prefHeight="25.0" prefWidth="84.0" />
+      <Button id="btn-green" layoutX="208.0" layoutY="237.0" mnemonicParsing="false" onAction="#hello" prefHeight="25.0" prefWidth="70.0" text="Add" />
+      <Label layoutX="338.0" layoutY="237.0" prefHeight="25.0" text="Tổng tiền" />
+      <TextField layoutX="410.0" layoutY="237.0" prefHeight="25.0" prefWidth="84.0" />
       <Label layoutX="340.0" layoutY="177.0" prefHeight="25.0" text="Ưu đãi" />
       <TextField layoutX="384.0" layoutY="177.0" prefHeight="25.0" prefWidth="160.0" />
-      <Label layoutX="340.0" layoutY="206.0" prefHeight="25.0" text="Số bàn" />
-      <TextField layoutX="384.0" layoutY="206.0" prefHeight="25.0" prefWidth="160.0" />
+      <Label layoutX="340.0" layoutY="207.0" prefHeight="25.0" text="Số bàn" />
+      <TextField layoutX="384.0" layoutY="207.0" prefHeight="25.0" prefWidth="160.0" />
    </children>
 </Pane>

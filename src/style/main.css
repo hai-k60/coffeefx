@@ -19,3 +19,27 @@ and open the template in the editor.
 #header_font{
     -fx-text-fill: rgb(51,51,51);
 }
+
+#btn-green{
+    -fx-background-color: green;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+#btn-blue{
+    -fx-background-color: blue;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+#btn-red{
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+#btn-dark{
+    -fx-background-color: rgb(51,51,51);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
