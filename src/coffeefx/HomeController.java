@@ -87,14 +87,20 @@ public class HomeController implements Initializable {
         System.out.println("load form customer");
     }
     
-//    @FXML
-//    private void onClickMaterials(ActionEvent event){
-//    }
-//    
-//    @FXML
-//    private void onClickStorage(ActionEvent event){
-//    }
-//    
+    @FXML
+    private void onClickMaterial(ActionEvent event) throws IOException{
+        Pane root = FXMLLoader.load(getClass().getResource("panelmaterial.fxml"));
+        panel_main.getChildren().setAll(root);
+        System.out.println("load form customer");
+    }
+    
+    @FXML
+    private void onClickStorage(ActionEvent event) throws IOException{
+        Pane root = FXMLLoader.load(getClass().getResource("panelstorage.fxml"));
+        panel_main.getChildren().setAll(root);
+        System.out.println("load form customer");
+    }
+    
     @FXML
     private void onClickReport(ActionEvent event) throws IOException{
         Pane root = FXMLLoader.load(getClass().getResource("panelreport.fxml"));
