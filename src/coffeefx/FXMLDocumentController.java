@@ -76,7 +76,6 @@ public class FXMLDocumentController implements Initializable {
             // Header Text: null
             alert.setHeaderText(null);
             alert.setContentText("Tài khoản hoặc mật khẩu không đúng");
-
             alert.showAndWait();
         }
         

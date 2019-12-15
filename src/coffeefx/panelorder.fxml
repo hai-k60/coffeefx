@@ -15,7 +15,7 @@
          <font>
             <Font name="System Bold" size="27.0" />
          </font></Label>
-      <Button id="btn-dark" layoutX="293.0" layoutY="84.0" mnemonicParsing="false" onAction="#hello" prefHeight="25.0" prefWidth="70.0" text="Check" />
+      <Button id="btn-dark" fx:id="btn_check" layoutX="293.0" layoutY="84.0" mnemonicParsing="false" onAction="#onClickCheck" prefHeight="25.0" prefWidth="70.0" text="Check" />
       <Label id="line" layoutX="20.0" layoutY="48.0" prefHeight="3.0" prefWidth="545.0">
          <font>
             <Font size="1.0" />
@@ -35,29 +35,30 @@
       <Label layoutX="30.0" layoutY="115.0" prefHeight="25.0" text="Tên khách hàng" />
       <Label layoutX="383.0" layoutY="85.0" prefHeight="25.0" text="Mã khách hàng" />
       <Label layoutX="383.0" layoutY="115.0" prefHeight="25.0" text="Điểm tích lũy" />
-      <TextField layoutX="118.0" layoutY="85.0" prefHeight="25.0" prefWidth="160.0" />
-      <TextField layoutX="118.0" layoutY="115.0" prefHeight="25.0" prefWidth="160.0" />
-      <TextField layoutX="471.0" layoutY="85.0" prefHeight="25.0" prefWidth="70.0" />
-      <TextField layoutX="471.0" layoutY="115.0" prefHeight="25.0" prefWidth="70.0" />
-      <Button id="btn-dark" layoutX="293.0" layoutY="114.0" mnemonicParsing="false" onAction="#hello" prefHeight="25.0" prefWidth="70.0" text="Create" />
-      <TableView layoutX="31.0" layoutY="274.0" prefHeight="196.0" prefWidth="534.0">
+      <TextField fx:id="txt_sodienthoai" layoutX="118.0" layoutY="85.0" prefHeight="25.0" prefWidth="160.0" />
+      <TextField fx:id="txt_tenkhachhang" layoutX="118.0" layoutY="115.0" prefHeight="25.0" prefWidth="160.0" />
+      <TextField fx:id="txt_makhachhang" layoutX="471.0" layoutY="85.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextField fx:id="txt_diemtichluy" layoutX="471.0" layoutY="115.0" prefHeight="25.0" prefWidth="70.0" />
+      <Button id="btn-dark" fx:id="btn_create" layoutX="293.0" layoutY="114.0" mnemonicParsing="false" onAction="#onClickCreate" prefHeight="25.0" prefWidth="70.0" text="Create" />
+      <TableView fx:id="tb_danhsachorder" layoutX="32.0" layoutY="274.0" prefHeight="196.0" prefWidth="521.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Tên đồ uống" />
-          <TableColumn prefWidth="75.0" text="Số lượng" />
+          <TableColumn fx:id="cl_tendouong" prefWidth="188.0" text="Tên đồ uống" />
+          <TableColumn fx:id="cl_soluong" prefWidth="195.0" text="Số lượng" />
+            <TableColumn fx:id="cl_dongia" prefWidth="137.0" text="Đơn giá" />
         </columns>
       </TableView>
       <Label layoutX="30.0" layoutY="177.0" prefHeight="25.0" text="Mã đơn hàng" />
-      <TextField layoutX="118.0" layoutY="177.0" prefHeight="25.0" prefWidth="160.0" />
+      <TextField fx:id="txt_madonhang" layoutX="118.0" layoutY="177.0" prefHeight="25.0" prefWidth="160.0" />
       <Label layoutX="32.0" layoutY="207.0" prefHeight="25.0" text="Chọn đồ uống" />
-      <ComboBox layoutX="118.0" layoutY="207.0" prefHeight="25.0" prefWidth="160.0" />
+      <ComboBox fx:id="cb_douong" layoutX="118.0" layoutY="207.0" prefHeight="25.0" prefWidth="160.0" />
       <Label layoutX="32.0" layoutY="237.0" prefHeight="25.0" text="Số lượng" />
-      <TextField layoutX="120.0" layoutY="237.0" prefHeight="25.0" prefWidth="84.0" />
-      <Button id="btn-green" layoutX="208.0" layoutY="237.0" mnemonicParsing="false" onAction="#hello" prefHeight="25.0" prefWidth="70.0" text="Add" />
+      <TextField fx:id="txt_soluong" layoutX="120.0" layoutY="237.0" prefHeight="25.0" prefWidth="84.0" />
+      <Button id="btn-green" fx:id="btn_add" layoutX="208.0" layoutY="237.0" mnemonicParsing="false" onAction="#onClickAdd" prefHeight="25.0" prefWidth="70.0" text="Add" />
       <Label layoutX="338.0" layoutY="237.0" prefHeight="25.0" text="Tổng tiền" />
       <TextField layoutX="410.0" layoutY="237.0" prefHeight="25.0" prefWidth="84.0" />
       <Label layoutX="340.0" layoutY="177.0" prefHeight="25.0" text="Ưu đãi" />
-      <TextField layoutX="384.0" layoutY="177.0" prefHeight="25.0" prefWidth="160.0" />
+      <TextField fx:id="txt_uudai" layoutX="384.0" layoutY="177.0" prefHeight="25.0" prefWidth="160.0" />
       <Label layoutX="340.0" layoutY="207.0" prefHeight="25.0" text="Số bàn" />
-      <TextField layoutX="384.0" layoutY="207.0" prefHeight="25.0" prefWidth="160.0" />
+      <TextField fx:id="txt_soban" layoutX="384.0" layoutY="207.0" prefHeight="25.0" prefWidth="160.0" />
    </children>
 </Pane>
