@@ -14,12 +14,15 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javax.swing.table.DefaultTableModel;
 import model.material;
+import model.storage_data;
 
 /**
  *
  * @author danhnghia
  */
 public class material_data {
+    
+    //Function for taking data from database
     public static ObservableList<material> GetMaterialData()
     {
         ObservableList<material> list_mat = FXCollections.observableArrayList();
@@ -43,5 +46,12 @@ public class material_data {
             e.printStackTrace();
         }
         return list_mat;
+    }
+    
+    //Function for button Update
+    public static void add_to_available(String amount, String old_amount, int id){
+        int total = Integer.parseInt(amount) + Integer.parseInt(old_amount);
+        storage_data.modMaterial(id, Integer.toString(total));
+        //material_data.GetMaterialData();
     }
 }
