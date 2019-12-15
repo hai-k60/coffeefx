@@ -5,6 +5,7 @@
  */
 package coffeefx;
 
+import coffee.data.login_data;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -26,6 +27,10 @@ public class Coffeefx extends Application {
         
         stage.setScene(scene);
         stage.show();
+        System.out.println("Starting ....");
+        login_data lg_data= new login_data();
+        int check = lg_data.getLogin("admins","admin");
+        System.out.println(check);
     }
 
     /**

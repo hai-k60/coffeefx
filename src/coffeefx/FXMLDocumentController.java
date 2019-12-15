@@ -5,6 +5,7 @@
  */
 package coffeefx;
 
+import coffee.data.login_data;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -40,13 +41,15 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+        System.out.println("You clicked Login!");
+     
         String username = txt_username.getText();
         String password = txt_password.getText();
-        
+        login_data lg_data= new login_data();
+        int check = lg_data.getLogin(username,password);
+        System.out.println(check);
         //Xu ly dang nhap
-        if(username.equals("admin") && password.equals("admin")){
+        if(check==1){
             System.out.println("Dang nhap thanh cong");
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader();
