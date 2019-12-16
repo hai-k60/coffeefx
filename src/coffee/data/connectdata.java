@@ -25,7 +25,7 @@ public class connectdata {
         {
             String url = "jdbc:mysql://localhost:3306/coffeeshop";
             String user="root";
-            String pass="danhnghia26";
+            String pass="root";
             try{
                 Class.forName("com.mysql.jdbc.Driver");
                 connection = (Connection) DriverManager.getConnection(url, user, pass);
