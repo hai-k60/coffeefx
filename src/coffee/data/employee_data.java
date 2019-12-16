@@ -73,5 +73,16 @@ public class employee_data {
         }
     }
     // Ham Update du lieu
+    public static void updateEmployee(int id, String hoten, String chucvu, String diachi, String username,
+                                    String password, String sdt){
+        String querry = "UPDATE `coffeeshop`.`nhanvien` SET `hoten`='" + hoten + "', `diachi`='" + diachi + "', `chucvu`='" + chucvu + "', `username`='" + username + "', `password`='" + password + "', `sodienthoai`='" + sdt + "' WHERE `id_nhanvien`='" + id +"';";
+        java.sql.Connection connection= openConnection();//mo ket noi
+        try{
+            PreparedStatement ps = connection.prepareCall(querry);//chuan bi ket noi
+            ps.execute();//Thuc thi truy van
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+    }
     
 }
