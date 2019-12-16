@@ -9,6 +9,7 @@ import static coffee.data.connectdata.openConnection;
 import com.mysql.jdbc.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Vector;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -53,5 +54,56 @@ public class material_data {
         int total = Integer.parseInt(amount) + Integer.parseInt(old_amount);
         storage_data.modMaterial(id, Integer.toString(total));
         //material_data.GetMaterialData();
+    }
+    
+    public static void addMaterial(String txt_nguyenlieu, String txt_luong, String txt_donvi){
+         String querry = "INSERT INTO nguyenlieu (tennguyenlieu, luong, donvi) VALUES (?,?,?)";
+        
+        Connection connection = openConnection();//Mo ket noi
+
+        try{
+            PreparedStatement ps = connection.prepareStatement(querry);//Chuan bi truy van
+            ps.setString(1, txt_nguyenlieu);
+            ps.setString(2, txt_luong);
+            ps.setString(3, txt_donvi);
+            ps.execute();//Thuc thi truy van
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+     }
+    
+    public static int is_existed(String name){
+        int count = 0;
+        Connection connection = openConnection();//mo ket noi
+        //chuoi ket noi
+        String sql = "SELECT COUNT(*) FROM coffeeshop.nguyenlieu WHERE tennguyenlieu=\""+name+"\"";
+        try{
+            PreparedStatement ps = connection.prepareStatement(sql);//chuan bi truy van
+            ResultSet rs = ps.executeQuery();//Thuc thi truy van
+            rs.next();
+            count=rs.getInt("COUNT(*)");
+            //login_model acc = new login_model();
+            //return(count);
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+        return count;
+    }
+    
+    public static void delMaterial(int id){
+                String querry = "DELETE FROM nguyenlieu WHERE id_nguyenlieu= (?)";
+        
+        Connection connection = openConnection();//Mo ket noi
+
+        try{
+            PreparedStatement ps = connection.prepareStatement(querry);//Chuan bi truy van
+            //int row = table_nguyenlieu.getSelectedRow();
+            ps.setInt(1, id);
+            ps.execute();//Thuc thi truy van
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

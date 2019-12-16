@@ -56,6 +56,8 @@ public class PanelmaterialController implements Initializable {
     private TextField txt_amount;
     @FXML
     private TextField txt_cost;
+    @FXML
+    private Button btt_delete;
 
     /**
      * Initializes the controller class.
@@ -89,8 +91,28 @@ public class PanelmaterialController implements Initializable {
 
     @FXML
     private void handleButtonCreate(ActionEvent event) {
-        
-        
+        if(txt_name.getText().equals("") || txt_amount.getText().equals("")|| txt_cost.getText().equals("")){
+            System.out.println("Bạn chưa nhập giá trị đầy đủ vào các ô!!!");
+            lb_warn.setText("Bạn chưa nhập giá trị đầy đủ vào các ô!!!");
+            lb_warn.setVisible(true);
+        }
+        else{
+            String name = txt_name.getText();
+            String amount = txt_amount.getText();
+            String cost = txt_cost.getText();
+            String unit = cbb_unit.getSelectionModel().getSelectedItem();
+            if(material_data.is_existed(name) == 1){
+                lb_warn.setText("Nguyên liệu này đã tồn tại, bạn không thể thêm! Bạn có thể Update!");
+                lb_warn.setVisible(true);
+            }
+            else{
+                //System.out.println(name + "test");
+                material_data.addMaterial(name, amount, unit);
+                table.setItems(material_data.GetMaterialData());
+            }
+
+            
+        }
     }
 
     @FXML
@@ -139,6 +161,27 @@ public class PanelmaterialController implements Initializable {
         //Get value from amout txt field
         return mat;
         
+    }
+
+    @FXML
+    private void handleButtonDelete(ActionEvent event) {
+        if(table.getSelectionModel().getSelectedItem().equals("")){
+            lb_warn.setVisible(true);
+            lb_warn.setText("Không có dòng nào được chọn cả!!!");
+        }
+        else{
+            lb_warn.setVisible(false);
+            material mat = table.getSelectionModel().getSelectedItem();
+            //Load value from row to txt field
+            //txt_name.setText(mat.getName());
+            //cbb_unit.setPromptText(mat.getUnit()); //TODO: Check this, It's not ok!
+            
+            int id = mat.getId();
+            material_data.delMaterial(id);
+            table.setItems(material_data.GetMaterialData());
+
+        }
+
     }
     
     

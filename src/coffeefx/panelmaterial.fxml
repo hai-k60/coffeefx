@@ -51,7 +51,7 @@
       <Label layoutX="308.0" layoutY="115.0" prefHeight="25.0" text="Đơn giá" />
       <TextField fx:id="txt_cost" layoutX="390.0" layoutY="115.0" prefHeight="25.0" prefWidth="160.0" />
       <Button id="btn-blue" fx:id="btt_update" layoutX="120.0" layoutY="181.0" mnemonicParsing="false" onAction="#handleButtonUpdate" prefHeight="25.0" prefWidth="70.0" text="Update" />
-      <Button id="btn-red" layoutX="208.0" layoutY="181.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Delete" />
+      <Button id="btn-red" fx:id="btt_delete" layoutX="208.0" layoutY="181.0" mnemonicParsing="false" onAction="#handleButtonDelete" prefHeight="25.0" prefWidth="70.0" text="Delete" />
       <ComboBox fx:id="cbb_unit" layoutX="390.0" layoutY="85.0" prefWidth="160.0" promptText="gam" />
       <Label fx:id="lb_warn" contentDisplay="CENTER" layoutX="140.0" layoutY="152.0" prefHeight="17.0" prefWidth="368.0" textFill="#ff0707" />
    </children>
