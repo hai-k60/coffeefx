@@ -15,7 +15,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javax.swing.table.DefaultTableModel;
 import model.material;
-import model.storage_data;
+import coffee.data.storage_data;
 
 /**
  *
@@ -52,8 +52,25 @@ public class material_data {
     //Function for button Update
     public static void add_to_available(String amount, String old_amount, int id){
         int total = Integer.parseInt(amount) + Integer.parseInt(old_amount);
-        storage_data.modMaterial(id, Integer.toString(total));
+        modMaterial(id, Integer.toString(total));
         //material_data.GetMaterialData();
+    }
+    
+    public static void modMaterial(int id, String amount){
+        
+        String querry = "UPDATE nguyenlieu SET luong = ? WHERE id_nguyenlieu = ?";
+        
+        Connection connection = openConnection();//Mo ket noi
+        try{
+            PreparedStatement ps = connection.prepareStatement(querry);//Chuan bi truy van
+            //int row = table_nguyenlieu.getSelectedRow();
+            ps.setInt(1, Integer.parseInt(amount));
+            ps.setInt(2, id);
+            ps.executeUpdate();//Thuc thi truy van
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     
     public static void addMaterial(String txt_nguyenlieu, String txt_luong, String txt_donvi){
