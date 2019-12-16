@@ -53,8 +53,14 @@ public class material_data {
     public static void add_to_available(String amount, String old_amount, int id){
         int total = Integer.parseInt(amount) + Integer.parseInt(old_amount);
         modMaterial(id, Integer.toString(total));
-        //material_data.GetMaterialData();
+        //material_data.GetMaterialData();//lll
     }
+    public static void mod_available(String amount, int id){
+        //int total = Integer.parseInt(amount) + Integer.parseInt(old_amount);
+        modMaterial(id, amount);
+        //material_data.GetMaterialData();//lll
+    }
+    
     
     public static void modMaterial(int id, String amount){
         
