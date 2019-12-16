@@ -53,13 +53,14 @@
       <Label layoutX="32.0" layoutY="207.0" prefHeight="25.0" text="Chọn đồ uống" />
       <ComboBox fx:id="cb_douong" layoutX="118.0" layoutY="207.0" prefHeight="25.0" prefWidth="160.0" />
       <Label layoutX="32.0" layoutY="237.0" prefHeight="25.0" text="Số lượng" />
-      <TextField fx:id="txt_soluong" layoutX="120.0" layoutY="237.0" prefHeight="25.0" prefWidth="84.0" />
+      <TextField fx:id="txt_soluong" layoutX="118.0" layoutY="237.0" prefHeight="25.0" prefWidth="84.0" />
       <Button id="btn-green" fx:id="btn_add" layoutX="208.0" layoutY="237.0" mnemonicParsing="false" onAction="#onClickAdd" prefHeight="25.0" prefWidth="70.0" text="Add" />
-      <Label layoutX="338.0" layoutY="237.0" prefHeight="25.0" text="Tổng tiền" />
-      <TextField id="txt-tongtien" fx:id="txt_tongtien" layoutX="405.0" layoutY="237.0" prefHeight="25.0" prefWidth="138.0" />
-      <Label layoutX="340.0" layoutY="177.0" prefHeight="25.0" text="Ưu đãi" />
+      <Label layoutX="324.0" layoutY="237.0" prefHeight="25.0" text="Tổng tiền" />
+      <TextField id="txt-tongtien" fx:id="txt_tongtien" layoutX="384.0" layoutY="237.0" prefHeight="25.0" prefWidth="84.0" />
+      <Label layoutX="326.0" layoutY="177.0" prefHeight="25.0" text="Ưu đãi" />
       <TextField fx:id="txt_uudai" layoutX="384.0" layoutY="177.0" prefHeight="25.0" prefWidth="160.0" />
-      <Label layoutX="340.0" layoutY="207.0" prefHeight="25.0" text="Số bàn" />
+      <Label layoutX="326.0" layoutY="207.0" prefHeight="25.0" text="Số bàn" />
       <TextField fx:id="txt_soban" layoutX="384.0" layoutY="207.0" prefHeight="25.0" prefWidth="160.0" />
+      <Button id="btn-yellow" layoutX="474.0" layoutY="237.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Print" />
    </children>
 </Pane>
