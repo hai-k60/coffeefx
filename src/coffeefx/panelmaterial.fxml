@@ -54,5 +54,6 @@
       <Button id="btn-red" fx:id="btt_delete" layoutX="208.0" layoutY="181.0" mnemonicParsing="false" onAction="#handleButtonDelete" prefHeight="25.0" prefWidth="70.0" text="Delete" />
       <ComboBox fx:id="cbb_unit" layoutX="390.0" layoutY="85.0" prefWidth="160.0" promptText="gam" />
       <Label fx:id="lb_warn" contentDisplay="CENTER" layoutX="140.0" layoutY="152.0" prefHeight="17.0" prefWidth="368.0" textFill="#ff0707" />
+      <Label fx:id="test" layoutX="427.0" layoutY="198.0" text="Label" />
    </children>
 </AnchorPane>

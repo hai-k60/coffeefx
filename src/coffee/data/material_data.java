@@ -16,6 +16,7 @@ import javafx.collections.ObservableList;
 import javax.swing.table.DefaultTableModel;
 import model.material;
 import coffee.data.storage_data;
+import model.nguyenlieu;
 
 /**
  *
@@ -128,5 +129,28 @@ public class material_data {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+     public static String getTennguyenlieu(int id_nguyenlieu)
+    {
+        String kq = "";
+        String querry = "SELECT * FROM nguyenlieu WHERE id_nguyenlieu =?";
+        Connection connection = openConnection(); 
+        try {
+           nguyenlieu p = new nguyenlieu();            
+           PreparedStatement ps = (PreparedStatement) connection.prepareStatement(querry);
+           ps.setInt(1, id_nguyenlieu);
+           ResultSet rs = ps.executeQuery();
+           while(rs.next())
+           {
+                p.setTennguyenlieu(rs.getString("tennguyenlieu"));
+                kq = p.getTennguyenlieu();
+                return kq;
+           }
+        }
+        catch (Exception e){
+            e.printStackTrace();
+       
+        }
+        return kq;
     }
 }
