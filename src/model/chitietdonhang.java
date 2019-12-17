@@ -11,11 +11,13 @@ package model;
  */
 public class chitietdonhang {
     private int id_douong;
+    private String tendouong;
     private int soluong;
     private int dongia;
 
-    public chitietdonhang(int id_douong, int soluong, int dongia) {
+    public chitietdonhang(int id_douong, String tendouong, int soluong, int dongia) {
         this.id_douong = id_douong;
+        this.tendouong = tendouong;
         this.soluong = soluong;
         this.dongia = dongia;
     }
@@ -29,6 +31,14 @@ public class chitietdonhang {
 
     public void setId_douong(int id_douong) {
         this.id_douong = id_douong;
+    }
+
+    public String getTendouong() {
+        return tendouong;
+    }
+
+    public void setTendouong(String tendouong) {
+        this.tendouong = tendouong;
     }
 
     public int getSoluong() {
@@ -47,4 +57,3 @@ public class chitietdonhang {
         this.dongia = dongia;
     }
 }
-

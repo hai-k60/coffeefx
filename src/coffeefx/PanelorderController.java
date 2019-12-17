@@ -19,6 +19,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
+import model.chitietdonhang;
 
 /**
  * FXML Controller class
@@ -30,7 +32,7 @@ public class PanelorderController implements Initializable {
     @FXML
     private ComboBox<String> cb_douong; 
     
-    ObservableList<String> list_unit = FXCollections.observableArrayList("Cà phê", "Sinh tố", "Trà sữa", "Siro");
+    ObservableList<String> list_unit = FXCollections.observableArrayList("Cà phê đen", "Cà phê nâu", "Cà phê cốt dừa");
     @FXML
     private Button btn_check;
     @FXML
@@ -44,13 +46,18 @@ public class PanelorderController implements Initializable {
     @FXML
     private Button btn_create;
     @FXML
-    private TableView<?> tb_danhsachorder;
+    private TableView<chitietdonhang> tb_danhsachorder;
     @FXML
-    private TableColumn<?, ?> cl_tendouong;
+    private TableColumn<chitietdonhang, Integer> cl_madouong;
     @FXML
-    private TableColumn<?, ?> cl_soluong;
+    private TableColumn<chitietdonhang, String> cl_tendouong;
     @FXML
-    private TableColumn<?, ?> cl_dongia;
+    private TableColumn<chitietdonhang, Integer> cl_soluong;
+    @FXML
+    private TableColumn<chitietdonhang, Integer> cl_dongia;
+    
+    private ObservableList<chitietdonhang> chitietdonhangList;
+    
     @FXML
     private TextField txt_madonhang;
     @FXML
@@ -61,10 +68,31 @@ public class PanelorderController implements Initializable {
     private TextField txt_uudai;
     @FXML
     private TextField txt_soban;
+    @FXML
+    private TextField txt_tongtien;
+    
     
     @FXML
     private void onClickAdd(ActionEvent event){
-        System.out.println("Hello hello");
+        if(txt_madonhang.getText().equals("")){
+            order_data ord_data=new order_data();
+            ord_data.addDonhang("", "", "", "", "");
+            String text=ord_data.getIdDonhang();
+            System.out.println(text);
+            txt_madonhang.setText(text);
+        }
+        
+        System.out.println(cb_douong.getSelectionModel().getSelectedItem().toString());
+        order_data ord_data = new order_data();
+        String[] datadouong= new String[3];
+        datadouong = ord_data.getDouong(cb_douong.getSelectionModel().getSelectedItem().toString());
+        //add do uong vao chi tiet don hang
+        ord_data.addDouong(txt_madonhang.getText(), datadouong[0], txt_soluong.getText(), datadouong[2]);
+        //Load chi tiet don hang len bang
+        
+        int tongtien=ord_data.getTongtien(txt_madonhang.getText());
+        txt_tongtien.setText(Integer.toString(tongtien));
+        loadTable(txt_madonhang.getText());
     }
         @FXML
     private void onClickCheck(ActionEvent event) {
@@ -99,11 +127,31 @@ public class PanelorderController implements Initializable {
     /**
      * Initializes the controller class.
      */
+    
+    public void loadTable(String id_dh){
+        cl_madouong.setCellValueFactory(new PropertyValueFactory<chitietdonhang, Integer>("id_douong"));
+        cl_dongia.setCellValueFactory(new PropertyValueFactory<chitietdonhang, Integer>("dongia"));
+        cl_tendouong.setCellValueFactory(new PropertyValueFactory<chitietdonhang, String>("tendouong"));
+        cl_soluong.setCellValueFactory(new PropertyValueFactory<chitietdonhang, Integer>("soluong"));
+    //        tb_danhsachorder.setItems(chitietdonhangList);
+        
+        //Load
+        order_data ord_data=new order_data();
+        tb_danhsachorder.setItems(ord_data.getChitietdonhang(id_dh));
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        // ComboBox
         cb_douong.setValue("Chọn đồ uống");
         cb_douong.setItems(list_unit);
+        
+        //TableView
+        chitietdonhangList=FXCollections.observableArrayList(
+                new chitietdonhang(1, "Cà phê", 1, 1)
+        );
+        
+        
     }    
 
 

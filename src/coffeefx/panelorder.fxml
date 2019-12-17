@@ -42,9 +42,10 @@
       <Button id="btn-dark" fx:id="btn_create" layoutX="293.0" layoutY="114.0" mnemonicParsing="false" onAction="#onClickCreate" prefHeight="25.0" prefWidth="70.0" text="Create" />
       <TableView fx:id="tb_danhsachorder" layoutX="32.0" layoutY="274.0" prefHeight="196.0" prefWidth="521.0">
         <columns>
-          <TableColumn fx:id="cl_tendouong" prefWidth="188.0" text="Tên đồ uống" />
-          <TableColumn fx:id="cl_soluong" prefWidth="195.0" text="Số lượng" />
-            <TableColumn fx:id="cl_dongia" prefWidth="137.0" text="Đơn giá" />
+          <TableColumn fx:id="cl_madouong" prefWidth="76.0" text="Mã đồ uống" />
+          <TableColumn fx:id="cl_tendouong" prefWidth="215.0" text="Tên đồ uống" />
+            <TableColumn fx:id="cl_soluong" prefWidth="115.0" text="Số lượng" />
+            <TableColumn fx:id="cl_dongia" prefWidth="114.0" text="Đơn giá" />
         </columns>
       </TableView>
       <Label layoutX="30.0" layoutY="177.0" prefHeight="25.0" text="Mã đơn hàng" />
@@ -55,7 +56,7 @@
       <TextField fx:id="txt_soluong" layoutX="120.0" layoutY="237.0" prefHeight="25.0" prefWidth="84.0" />
       <Button id="btn-green" fx:id="btn_add" layoutX="208.0" layoutY="237.0" mnemonicParsing="false" onAction="#onClickAdd" prefHeight="25.0" prefWidth="70.0" text="Add" />
       <Label layoutX="338.0" layoutY="237.0" prefHeight="25.0" text="Tổng tiền" />
-      <TextField layoutX="410.0" layoutY="237.0" prefHeight="25.0" prefWidth="84.0" />
+      <TextField id="txt-tongtien" fx:id="txt_tongtien" layoutX="405.0" layoutY="237.0" prefHeight="25.0" prefWidth="138.0" />
       <Label layoutX="340.0" layoutY="177.0" prefHeight="25.0" text="Ưu đãi" />
       <TextField fx:id="txt_uudai" layoutX="384.0" layoutY="177.0" prefHeight="25.0" prefWidth="160.0" />
       <Label layoutX="340.0" layoutY="207.0" prefHeight="25.0" text="Số bàn" />

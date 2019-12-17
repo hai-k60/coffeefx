@@ -12,7 +12,10 @@ import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.Vector;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javax.swing.table.DefaultTableModel;
+import model.chitietdonhang;
 
 /**
  *
@@ -145,31 +148,32 @@ public class order_data {
     }
     
     //Ham get chi tiet don hang
-//    public void GetChitietdoihang(DefaultTableModel myModel, String id_donhang)
-//    {
-//        Connection connection = openConnection();//Mo ket noi
-//        String sql="select id_douong,soluong,dongia from coffeeshop.chitietdonhang where coffeeshop.chitietdonhang.id_donhang="+id_donhang+""; //Chuoi truy van CSDL
-//        try{
-//            PreparedStatement ps = connection.prepareStatement(sql);//Chuan bi truy van
-//            ResultSet rs = ps.executeQuery();//Thuc thi truy van
-//            while(rs.next())//Doc du lieu
-//            {
-//                chitietdonhang ctdh = new chitietdonhang();
-//                ctdh.setId_douong(rs.getInt("id_douong"));
-//                ctdh.setDongia(rs.getInt("dongia"));
-//                //Dua du lieu nhanvien vao vector
-//                Vector vector = new Vector();
-//                vector.add(ctdh.getId_douong());
-//                vector.add(ctdh.getSoluong());
-//                vector.add(ctdh.getDongia());
-//                
-//                //Dua vector vao model
-//                myModel.addRow(vector);
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
+    public static ObservableList<chitietdonhang> getChitietdonhang(String id_donhang){
+        ObservableList<chitietdonhang> list_ctdh = FXCollections.observableArrayList();
+        Connection connection = openConnection();//Mo ket noi
+        String sql="SELECT chitietdonhang.id_douong, douong.tendouong, chitietdonhang.soluong, chitietdonhang.dongia\n" +
+                    "FROM chitietdonhang " +
+                    "INNER JOIN douong ON chitietdonhang.id_donhang=" +id_donhang+
+                    " where chitietdonhang.id_douong=douong.id_douong"; //Chuoi truy van CSDL
+        try{
+            PreparedStatement ps = connection.prepareStatement(sql);//Chuan bi truy van
+            ResultSet rs = ps.executeQuery();//Thuc thi truy van
+            while(rs.next())//Doc du lieu
+            {
+                
+                chitietdonhang ctdh= new chitietdonhang();
+                ctdh.setId_douong(rs.getInt("id_douong"));
+                ctdh.setTendouong(rs.getString("tendouong"));
+                ctdh.setSoluong(rs.getInt("soluong"));
+                ctdh.setDongia(rs.getInt("dongia"));
+                list_ctdh.add(ctdh);
+            }
+        //return list_mat;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list_ctdh;
+    }
 
     //HAm tinh tong tien
     public int getTongtien(String id_donhang){
