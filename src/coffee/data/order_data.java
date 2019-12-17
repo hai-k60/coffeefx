@@ -92,7 +92,7 @@ public class order_data {
         long time = date.getTime();
         Timestamp ts = new Timestamp(time);
         Connection connection= openConnection();//mo ket noi
-        String sql="INSERT INTO coffeeshop.donhang (id_khachhang, id_nhanvien, thoigian, uudai, soban) VALUES ('2', '1', '"+ts.toString()+"', '0', '2')";
+        String sql="INSERT INTO coffeeshop.donhang (id_khachhang, id_nhanvien, thoigian, uudai, soban) VALUES ('"+id_khachhang+"', '1', '"+ts.toString()+"', '"+uudai+"', '"+soban+"')";
         try{
             PreparedStatement ps = connection.prepareCall(sql);//chuan bi ket noi
             ps.execute();//Thuc thi truy van

@@ -44,6 +44,12 @@ and open the template in the editor.
     -fx-font-weight: bold;
 }
 
+#btn-yellow{
+    -fx-background-color: darkorange;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
 #txt-tongtien{
     -fx-text-fill: red;
     -fx-font-weight: bold;

@@ -76,7 +76,7 @@ public class PanelorderController implements Initializable {
     private void onClickAdd(ActionEvent event){
         if(txt_madonhang.getText().equals("")){
             order_data ord_data=new order_data();
-            ord_data.addDonhang("", "", "", "", "");
+            ord_data.addDonhang(txt_makhachhang.getText(), "", "", txt_uudai.getText(), txt_soban.getText());
             String text=ord_data.getIdDonhang();
             System.out.println(text);
             txt_madonhang.setText(text);
