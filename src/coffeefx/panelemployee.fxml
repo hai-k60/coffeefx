@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -8,7 +12,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="main-background" prefHeight="500.0" prefWidth="585.0" stylesheets="@../style/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coffeefx.PanelemployeeController">
+<AnchorPane id="main-background" prefHeight="500.0" prefWidth="585.0" stylesheets="@../style/main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coffeefx.PanelemployeeController">
        <children>
       <Label id="header_font" layoutX="21.0" layoutY="10.0" text="Employee">
          <font>
@@ -45,7 +49,7 @@
       <Label layoutX="308.0" layoutY="85.0" prefHeight="25.0" text="Chức vụ" />
       <Label layoutX="308.0" layoutY="115.0" prefHeight="25.0" text="Username" />
       <TextField layoutX="390.0" layoutY="85.0" prefHeight="25.0" prefWidth="160.0" />
-      <TextField layoutX="390.0" layoutY="115.0" prefHeight="25.0" prefWidth="160.0" />
+      <TextField layoutX="390.0" layoutY="128.0" prefHeight="25.0" prefWidth="160.0" />
       <Label layoutX="308.0" layoutY="145.0" prefHeight="25.0" text="Password" />
       <TextField layoutX="390.0" layoutY="145.0" prefHeight="25.0" prefWidth="160.0" />
       <Button id="btn-blue" layoutX="120.0" layoutY="181.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Update" />
