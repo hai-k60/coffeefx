@@ -38,6 +38,7 @@ CREATE TABLE `chitietdonhang` (
 
 LOCK TABLES `chitietdonhang` WRITE;
 /*!40000 ALTER TABLE `chitietdonhang` DISABLE KEYS */;
+INSERT INTO `chitietdonhang` VALUES (1,1,1,1000),(1,2,1,20000),(24,1,1,22000),(25,1,1,22000),(25,1,1,22000),(25,1,1,22000),(26,1,1,22000),(27,1,2,22000),(28,1,2,22000),(1,2,1,20000),(2,2,1,20000),(2,2,1,20000),(2,2,1,20000),(3,1,1,20000),(3,2,1,22000),(3,3,2,35000),(32,1,1,22000),(32,2,1,22000),(32,3,2,35000),(33,1,1,22000),(33,2,3,22000),(34,1,2,22000),(34,2,3,22000),(34,3,1,35000),(35,1,1,22000),(35,2,3,22000),(35,1,1,22000),(35,1,1,22000),(35,1,1,22000),(37,1,1,22000),(37,2,1,22000),(37,1,2,22000),(38,1,1,22000),(38,2,2,22000),(39,1,1,22000),(39,2,3,22000),(40,1,1,22000),(41,1,1,22000),(41,2,1,22000),(41,4,1,15000);
 /*!40000 ALTER TABLE `chitietdonhang` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -82,7 +83,7 @@ CREATE TABLE `donhang` (
   `soban` varchar(3) CHARACTER SET utf8 DEFAULT NULL,
   `tongtien` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_donhang`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -91,6 +92,7 @@ CREATE TABLE `donhang` (
 
 LOCK TABLES `donhang` WRITE;
 /*!40000 ALTER TABLE `donhang` DISABLE KEYS */;
+INSERT INTO `donhang` VALUES (1,1,1,'2019-11-04 00:00:00',0,'1',NULL),(2,2,1,'2019-11-04 00:00:00',0,'2',NULL),(3,2,1,'2019-11-06 11:15:28',0,'2',NULL),(4,2,1,'2019-11-06 11:24:40',0,'2',NULL),(5,2,1,'2019-11-06 11:26:20',0,'2',NULL),(6,2,1,'2019-11-06 11:28:39',0,'2',NULL),(7,2,1,'2019-11-06 11:31:07',0,'2',NULL),(8,2,1,'2019-11-06 11:33:31',0,'2',NULL),(9,2,1,'2019-11-06 11:35:05',0,'2',NULL),(10,2,1,'2019-11-06 11:36:09',0,'2',NULL),(11,2,1,'2019-11-06 11:36:14',0,'2',NULL),(12,2,1,'2019-11-06 11:36:15',0,'2',NULL),(13,2,1,'2019-11-06 11:37:46',0,'2',NULL),(14,2,1,'2019-11-06 11:37:48',0,'2',NULL),(15,2,1,'2019-11-06 11:39:52',0,'2',NULL),(16,2,1,'2019-11-06 11:45:01',0,'2',NULL),(17,2,1,'2019-11-06 11:47:48',0,'2',NULL),(18,2,1,'2019-11-06 11:47:50',0,'2',NULL),(19,2,1,'2019-11-06 11:51:08',0,'2',NULL),(20,2,1,'2019-11-06 11:51:10',0,'2',NULL),(21,2,1,'2019-11-06 11:52:32',0,'2',NULL),(22,2,1,'2019-11-06 11:57:38',0,'2',NULL),(23,2,1,'2019-11-06 12:01:24',0,'2',NULL),(24,2,1,'2019-11-06 14:38:43',0,'2',NULL),(25,2,1,'2019-11-06 14:51:33',0,'2',NULL),(26,2,1,'2019-11-06 14:56:53',0,'2',NULL),(27,2,1,'2019-11-06 14:58:50',0,'2',NULL),(28,2,1,'2019-11-06 14:59:52',0,'2',NULL),(29,2,1,'2019-12-16 10:33:03',0,'2',NULL),(30,2,1,'2019-12-16 10:36:40',0,'2',NULL),(31,2,1,'2019-12-16 10:39:12',0,'2',NULL),(32,2,1,'2019-12-16 10:46:01',0,'2',NULL),(33,2,1,'2019-12-16 10:55:13',0,'2',NULL),(34,1,1,'2019-12-16 12:49:58',10,'1',NULL),(35,1,1,'2019-12-16 17:29:21',10,'2',NULL),(36,1,1,'2019-11-04 00:00:00',1,'1',NULL),(37,1,1,'2019-11-04 00:00:00',1,'1',NULL),(38,2,1,'2019-12-18 13:32:29',0,'2',NULL),(39,2,1,'2019-12-18 13:36:16',0,'2',NULL),(40,2,1,'2019-12-18 13:42:08',0,'2',NULL),(41,2,1,'2019-12-18 13:58:10',0,'2',NULL);
 /*!40000 ALTER TABLE `donhang` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -134,7 +136,7 @@ CREATE TABLE `douong` (
   `gia` int(11) DEFAULT NULL,
   `donvi` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id_douong`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -143,7 +145,7 @@ CREATE TABLE `douong` (
 
 LOCK TABLES `douong` WRITE;
 /*!40000 ALTER TABLE `douong` DISABLE KEYS */;
-INSERT INTO `douong` VALUES (1,'Cà phê đen','Cà phê',22000,'Cốc');
+INSERT INTO `douong` VALUES (1,'Cà phê đen','Cà phê',22000,'Cốc'),(2,'Cà phê nâu','Cà phê',22000,'Cốc'),(3,'Cà phê cốt dừa','Cà phê',35000,'Cốc'),(4,'Trà chanh','Trà',15000,'Cốc'),(5,'Trà đào cam xả','Trà',45000,'Cốc'),(6,'Nước cam','Sinh tố',45000,'Cốc'),(7,'Bạc xỉu','Cà Phê',25000,'Cốc');
 /*!40000 ALTER TABLE `douong` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -160,7 +162,7 @@ CREATE TABLE `khachhang` (
   `sodienthoai` varchar(10) CHARACTER SET utf8 DEFAULT NULL,
   `diemtichluy` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_khachhang`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -169,6 +171,7 @@ CREATE TABLE `khachhang` (
 
 LOCK TABLES `khachhang` WRITE;
 /*!40000 ALTER TABLE `khachhang` DISABLE KEYS */;
+INSERT INTO `khachhang` VALUES (1,'Nguyễn Danh Nghĩa','0123123123',100),(2,'Nguyễn Văn Duy','0123456789',200),(3,'Nguyễn Văn Duy','0123456789',300),(4,'Nguyễn Văn Duy','0123456789',0),(5,'Nguyễn Duy','0123456780',0),(6,'Hiển','999999999',400),(7,'Đình Hải','08363636',0),(8,'Lê Lan','00000',0),(9,'Lê Lệ','111',400),(10,'Lê NAm','33333',0),(11,'Lê Văn Hoàng','9999999',0),(12,'Đào Phương Bắc','0896252323',0);
 /*!40000 ALTER TABLE `khachhang` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -185,7 +188,7 @@ CREATE TABLE `nguyenlieu` (
   `luong` int(11) DEFAULT NULL,
   `donvi` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id_nguyenlieu`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -194,7 +197,7 @@ CREATE TABLE `nguyenlieu` (
 
 LOCK TABLES `nguyenlieu` WRITE;
 /*!40000 ALTER TABLE `nguyenlieu` DISABLE KEYS */;
-INSERT INTO `nguyenlieu` VALUES (1,'Bột cà phê',1000,'g'),(2,'duong trang',1000,'g');
+INSERT INTO `nguyenlieu` VALUES (1,'Bột cà phê',3220,'g'),(3,'Đường',6225,'gam'),(4,'Bột cà phê 2',4000,'gam'),(7,'Sữa',1000,'gam'),(8,'Bột trà',2000,'gam');
 /*!40000 ALTER TABLE `nguyenlieu` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -214,7 +217,7 @@ CREATE TABLE `nhanvien` (
   `password` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
   `sodienthoai` varchar(10) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id_nhanvien`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -223,7 +226,7 @@ CREATE TABLE `nhanvien` (
 
 LOCK TABLES `nhanvien` WRITE;
 /*!40000 ALTER TABLE `nhanvien` DISABLE KEYS */;
-INSERT INTO `nhanvien` VALUES (1,'le HAi','a','a','a','a','0123'),(2,'Lê Văn Hải','Hà Nội','admin','admin','admin','0123625423');
+INSERT INTO `nhanvien` VALUES (2,'Lê Văn Hải','Hà Nội','admin','admin','admin','0123625423'),(3,'Nguyễn Danh Nghĩa','Ha noi','admin','b','b','0123000000');
 /*!40000 ALTER TABLE `nhanvien` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -247,6 +250,7 @@ CREATE TABLE `thanhphandouong` (
 
 LOCK TABLES `thanhphandouong` WRITE;
 /*!40000 ALTER TABLE `thanhphandouong` DISABLE KEYS */;
+INSERT INTO `thanhphandouong` VALUES (0,0,100),(1,1,1),(1,3,1),(2,3,100),(2,1,100),(2,0,100);
 /*!40000 ALTER TABLE `thanhphandouong` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -267,4 +271,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-06  0:47:57
+-- Dump completed on 2019-12-18 14:16:44
