@@ -37,10 +37,10 @@ import model.thanhphandouong;
  * @author MyPC
  */
 public class PanelmenuController implements Initializable {
-    ObservableList<String> list_unit_loai = FXCollections.observableArrayList("Cà Phê", "Trà");
+    ObservableList<String> list_unit_loai = FXCollections.observableArrayList("Cà Phê", "Trà","Sinh tố");
     ObservableList<String> list_unit_donvi = FXCollections.observableArrayList("Cốc", "Hộp");
-    ObservableList<String> list_unit_nguyenlieu = FXCollections.observableArrayList("Cà Phê", "Đường", "Sữa", "Trà");
-    ObservableList<String> list_unit_douong = FXCollections.observableArrayList("Cà phê", "Nâu đá", "Trà đá", "Trà đào");
+    ObservableList<String> list_unit_nguyenlieu = FXCollections.observableArrayList("Bột cà phê", "Đường", "Sữa", "Bột trà");
+    ObservableList<String> list_unit_douong = FXCollections.observableArrayList("Cà phê đen", "Cà phê nâu", "Cà phê cốt dừa", "Bạc xỉu","Trà chanh","Trà đào cam xả");
 //    public void fillComboBox(){
 //        String query = "select FirstName from douong";
 //        pst = conn.pepareStatement(query);
@@ -104,11 +104,11 @@ public class PanelmenuController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-                cbb_loaidouong.setValue("Cà Phê");
+                cbb_loaidouong.setValue("Chọn loại đồ uống");
                 cbb_loaidouong.setItems(list_unit_loai);
-                cbb_nguyenlieu1.setValue("Cà Phê");
+                cbb_nguyenlieu1.setValue("Chọn nguyên liệu");
                 cbb_nguyenlieu1.setItems(list_unit_nguyenlieu);
-                cbb_loaidouong1.setValue("Cà phê");
+                cbb_loaidouong1.setValue("Chọn đồ uống");
                 cbb_loaidouong1.setItems(list_unit_douong);
                 cbb_donvi.setValue("Cốc");
                 cbb_donvi.setItems(list_unit_donvi);
