@@ -12,6 +12,10 @@ and open the template in the editor.
     -fx-background-color: white;
 }   
 
+#main-background2{
+    -fx-background-color: rgb(249,249,240);
+}  
+
 #line{
     -fx-background-color: rgb(51,51,51);
 }
@@ -53,4 +57,61 @@ and open the template in the editor.
 #txt-tongtien{
     -fx-text-fill: red;
     -fx-font-weight: bold;
+}
+
+#box-green{
+    -fx-background-color: rgb(76,176,81);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+#box-orange{
+    -fx-background-color: rgb(247,142,1);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+#box-blue{
+    -fx-background-color: rgb(34,150,242);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+#box-red{
+    -fx-background-color: rgb(227,51,51);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+#box-orange-sub{
+    -fx-background-color: rgb(247,142,1);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+    -fx-font-size: 18;
+}
+
+#box-blue-sub{
+    -fx-background-color: rgb(34,150,242);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+}
+
+#box-green-sub{
+    -fx-background-color: rgb(76,176,81);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+}
+#box-red-sub{
+    -fx-background-color: rgb(227,51,51);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+}
+
+#box-white{
+    -fx-background-color: white;
+    
 }

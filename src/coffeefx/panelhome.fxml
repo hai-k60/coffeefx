@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane id="main-background2" prefHeight="500.0" prefWidth="585.0" stylesheets="@../style/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coffeefx.PanelhomeController">
+   <children>
+      <Pane id="main-background" layoutX="357.0" layoutY="23.0" prefHeight="219.0" prefWidth="207.0">
+         <children>
+            <ImageView fitHeight="61.0" fitWidth="49.0" layoutX="15.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/avatar1.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="14.0" layoutY="80.0" text="Họ tên :" />
+            <Label layoutX="14.0" layoutY="130.0" text="Số điện thoại :" />
+            <Label layoutX="14.0" layoutY="155.0" text="Địa chỉ :" />
+            <Label layoutX="14.0" layoutY="105.0" text="Mã nhân viên :" />
+            <Label layoutX="14.0" layoutY="180.0" text="Chức vụ :" />
+            <Label layoutX="84.0" layoutY="13.0" text="Lê Văn Hải">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="84.0" layoutY="40.0" text="Admin" textFill="#2f2f2f">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="115.0" layoutY="80.0" text="Lê Văn Hải" />
+            <Label layoutX="115.0" layoutY="130.0" text="0123456789" />
+            <Label layoutX="115.0" layoutY="155.0" text="Hà Nội" />
+            <Label layoutX="115.0" layoutY="105.0" text="000001" />
+            <Label layoutX="115.0" layoutY="180.0" text="Giám đốc" />
+         </children>
+      </Pane>
+      <Pane id="main-background" layoutX="22.0" layoutY="23.0" prefHeight="219.0" prefWidth="323.0">
+         <children>
+            <Label id="box-green" alignment="CENTER" layoutX="14.0" layoutY="10.0" prefHeight="27.0" prefWidth="132.0" text="Doanh thu ngày" />
+            <Label id="box-green-sub" alignment="CENTER" layoutX="14.0" layoutY="39.0" prefHeight="63.0" prefWidth="132.0" text="1.000.000" />
+            <Label id="box-red" alignment="CENTER" layoutX="173.0" layoutY="10.0" prefHeight="27.0" prefWidth="132.0" text="Tổng đơn hàng" />
+            <Label id="box-red-sub" alignment="CENTER" layoutX="173.0" layoutY="39.0" prefHeight="63.0" prefWidth="132.0" text="60" />
+            <Label id="box-orange" alignment="CENTER" layoutX="14.0" layoutY="116.0" prefHeight="27.0" prefWidth="132.0" text="Khách hàng" />
+            <Label id="box-orange-sub" alignment="CENTER" layoutX="14.0" layoutY="145.0" prefHeight="63.0" prefWidth="132.0" text="50" />
+            <Label id="box-blue" alignment="CENTER" layoutX="173.0" layoutY="116.0" prefHeight="27.0" prefWidth="132.0" text="Tổng số bán" />
+            <Label id="box-blue-sub" alignment="CENTER" layoutX="173.0" layoutY="145.0" prefHeight="63.0" prefWidth="132.0" text="300" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="219.0" fitWidth="534.0" layoutX="77.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/chart.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

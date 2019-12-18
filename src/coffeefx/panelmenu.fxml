@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -16,9 +12,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane id="main-background" prefHeight="500.0" prefWidth="585.0" stylesheets="@../style/main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coffeefx.PanelmenuController">
+<Pane id="main-background" prefHeight="500.0" prefWidth="585.0" stylesheets="@../style/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coffeefx.PanelmenuController">
    <children>
-      <TabPane layoutX="19.0" layoutY="55.0" prefHeight="432.0" prefWidth="545.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutX="20.0" layoutY="51.0" prefHeight="432.0" prefWidth="545.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab fx:id="DoUong_tab" text="Đồ uống">
             <content>
@@ -29,32 +25,32 @@
                               <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
-                        <Label layoutX="15.0" layoutY="28.0" prefHeight="25.0" text="Tên đồ uống" />
-                        <Label layoutX="15.0" layoutY="58.0" prefHeight="25.0" text="Loại đồ uống" />
-                        <TextField fx:id="tendouong_txt" layoutX="103.0" layoutY="28.0" prefHeight="25.0" prefWidth="309.0" />
-                        <Button id="btn-green" fx:id="btn_them" layoutX="68.0" layoutY="158.0" mnemonicParsing="false" onAction="#add_button" prefHeight="25.0" prefWidth="70.0" text="Thêm" />
-                        <Label layoutX="15.0" layoutY="90.0" prefHeight="25.0" text="Giá tiền" />
-                        <TextField fx:id="giatien_txt" layoutX="103.0" layoutY="90.0" prefHeight="25.0" prefWidth="309.0" />
-                        <Label layoutX="15.0" layoutY="123.0" prefHeight="25.0" text="Đơn vị" />
-                        <Button id="btn-blue" fx:id="btn_sua" layoutX="222.0" layoutY="158.0" mnemonicParsing="false" onAction="#update_btn" prefHeight="25.0" prefWidth="70.0" text="Sửa" />
-                        <Button id="btn-red" fx:id="btn_xoa" layoutX="377.0" layoutY="158.0" mnemonicParsing="false" onAction="#delete_btn" prefHeight="25.0" prefWidth="70.0" text="Xóa" />
-                        <ComboBox fx:id="cbb_donvi" layoutX="102.0" layoutY="121.0" prefHeight="25.0" prefWidth="309.0" />
-                        <ComboBox fx:id="cbb_loaidouong" layoutX="103.0" layoutY="60.0" prefHeight="25.0" prefWidth="309.0" />
-                        <Label layoutX="15.0" layoutY="211.0" text="Danh sách đồ uống">
+                        <Label layoutX="15.0" layoutY="30.0" prefHeight="25.0" text="Tên đồ uống" />
+                        <Label layoutX="15.0" layoutY="60.0" prefHeight="25.0" text="Loại đồ uống" />
+                        <TextField fx:id="tendouong_txt" layoutX="103.0" layoutY="30.0" prefHeight="25.0" prefWidth="160.0" />
+                        <Button id="btn-green" fx:id="btn_them" layoutX="19.0" layoutY="98.0" mnemonicParsing="false" onAction="#add_button" prefHeight="25.0" prefWidth="70.0" text="Thêm" />
+                        <Label layoutX="297.0" layoutY="30.0" prefHeight="25.0" text="Giá tiền" />
+                        <TextField fx:id="giatien_txt" layoutX="352.0" layoutY="30.0" prefHeight="25.0" prefWidth="160.0" />
+                        <Label layoutX="297.0" layoutY="64.0" prefHeight="25.0" text="Đơn vị" />
+                        <Button id="btn-blue" fx:id="btn_sua" layoutX="107.0" layoutY="98.0" mnemonicParsing="false" onAction="#update_btn" prefHeight="25.0" prefWidth="70.0" text="Sửa" />
+                        <Button id="btn-red" fx:id="btn_xoa" layoutX="193.0" layoutY="98.0" mnemonicParsing="false" onAction="#delete_btn" prefHeight="25.0" prefWidth="70.0" text="Xóa" />
+                        <ComboBox fx:id="cbb_donvi" layoutX="351.0" layoutY="62.0" prefHeight="25.0" prefWidth="160.0" />
+                        <ComboBox fx:id="cbb_loaidouong" layoutX="103.0" layoutY="62.0" prefHeight="25.0" prefWidth="160.0" />
+                        <Label layoutX="214.0" layoutY="151.0" text="Danh sách đồ uống">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
-                        <TableView fx:id="table_menu" layoutX="15.0" layoutY="230.0" onMouseClicked="#handleMouseClickedRow" prefHeight="173.0" prefWidth="516.0">
+                        <TableView fx:id="table_menu" layoutX="15.0" layoutY="174.0" onMouseClicked="#handleMouseClickedRow" prefHeight="224.0" prefWidth="515.0">
                           <columns>
-                            <TableColumn fx:id="id_column" prefWidth="82.0" text="ID" />
-                            <TableColumn fx:id="DoUong_column" prefWidth="119.0" text="Đồ uống" />
+                            <TableColumn fx:id="id_column" prefWidth="62.0" text="ID" />
+                            <TableColumn fx:id="DoUong_column" prefWidth="139.0" text="Đồ uống" />
                               <TableColumn fx:id="Loai_column" prefWidth="103.0" text="Loại" />
                               <TableColumn fx:id="Gia_column" prefWidth="107.0" text="Giá" />
                               <TableColumn fx:id="DonVi_column" prefWidth="103.0" text="Đơn vị" />
                           </columns>
                         </TableView>
-                        <Label fx:id="lb_warn" layoutX="19.0" layoutY="193.0" prefHeight="17.0" prefWidth="508.0" />
+                        <Label fx:id="lb_warn" layoutX="19.0" layoutY="131.0" prefHeight="17.0" prefWidth="508.0" textFill="RED" />
                      </children>
                   </AnchorPane>
             </content>
@@ -63,29 +59,29 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="12.0" layoutY="11.0" text="Đồ uống">
+                        <Label layoutX="12.0" layoutY="11.0" text="Thành phần nguyên liệu">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
-                        <Label layoutX="12.0" layoutY="33.0" prefHeight="25.0" text="Chọn đồ uống" />
-                        <Label layoutX="12.0" layoutY="63.0" prefHeight="25.0" text="Chọn nguyên liệu" />
-                        <Label layoutX="12.0" layoutY="95.0" prefHeight="25.0" text="Lượng" />
-                        <Label layoutX="129.0" layoutY="180.0" text="Danh sách thành phần nguyên liệu">
+                        <Label layoutX="12.0" layoutY="36.0" prefHeight="25.0" text="Chọn đồ uống" />
+                        <Label layoutX="12.0" layoutY="67.0" prefHeight="25.0" text="Chọn nguyên liệu" />
+                        <Label layoutX="12.0" layoutY="98.0" prefHeight="25.0" text="Lượng" />
+                        <Label layoutX="159.0" layoutY="171.0" text="Danh sách thành phần nguyên liệu">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
-                        <TableView fx:id="table_thanhphan" layoutX="18.0" layoutY="199.0" prefHeight="187.0" prefWidth="455.0">
+                        <TableView fx:id="table_thanhphan" layoutX="15.0" layoutY="192.0" prefHeight="201.0" prefWidth="515.0">
                           <columns>
-                            <TableColumn fx:id="idnguyenlieu_column" prefWidth="221.0" text="ID Nguyên Liệu" />
-                              <TableColumn fx:id="luong_column" prefWidth="233.0" text="Lượng" />
+                            <TableColumn fx:id="idnguyenlieu_column" prefWidth="248.0" text="Tên nguyên liệu" />
+                              <TableColumn fx:id="luong_column" prefWidth="266.0" text="Lượng" />
                           </columns>
                         </TableView>
-                        <ComboBox fx:id="cbb_loaidouong1" layoutX="116.0" layoutY="33.0" onAction="#showlist" prefHeight="25.0" prefWidth="160.0" />
-                        <Button id="btn-green" fx:id="btn_capnhatTP" layoutX="129.0" layoutY="132.0" mnemonicParsing="false" onAction="#capnhatTP_btn_test" text="Cập nhật thành phần" />
-                        <ComboBox fx:id="cbb_nguyenlieu1" layoutX="116.0" layoutY="63.0" prefHeight="25.0" prefWidth="159.0" />
-                        <TextField fx:id="luong_txt1" layoutX="116.0" layoutY="95.0" prefHeight="25.0" prefWidth="158.0" />
+                        <ComboBox fx:id="cbb_loaidouong1" layoutX="116.0" layoutY="36.0" onAction="#showlist" prefHeight="25.0" prefWidth="160.0" />
+                        <Button id="btn-dark" fx:id="btn_capnhatTP" layoutX="116.0" layoutY="130.0" mnemonicParsing="false" onAction="#capnhatTP_btn_test" prefHeight="25.0" prefWidth="160.0" text="Cập nhật thành phần" />
+                        <ComboBox fx:id="cbb_nguyenlieu1" layoutX="116.0" layoutY="67.0" prefHeight="25.0" prefWidth="160.0" />
+                        <TextField fx:id="luong_txt1" layoutX="116.0" layoutY="98.0" prefHeight="25.0" prefWidth="160.0" />
                         <Label fx:id="lb_warn1" layoutX="22.0" layoutY="163.0" prefHeight="17.0" prefWidth="508.0" />
                      </children>
                   </AnchorPane>
