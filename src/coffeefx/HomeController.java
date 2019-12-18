@@ -107,12 +107,27 @@ public class HomeController implements Initializable {
         panel_main.getChildren().setAll(root);
         System.out.println("load form report");
     }
+    
+    @FXML
+    private void onClickHome(ActionEvent event) throws IOException{
+        Pane root = FXMLLoader.load(getClass().getResource("panelhome.fxml"));
+        panel_main.getChildren().setAll(root);
+        System.out.println("load form home");
+    }
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        Pane root;
+        try {
+            root = FXMLLoader.load(getClass().getResource("panelhome.fxml"));
+            panel_main.getChildren().setAll(root);
+        } catch (IOException ex) {
+            Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }    
     
 }
