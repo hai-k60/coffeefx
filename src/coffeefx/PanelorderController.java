@@ -32,7 +32,7 @@ public class PanelorderController implements Initializable {
     @FXML
     private ComboBox<String> cb_douong; 
     
-    ObservableList<String> list_unit = FXCollections.observableArrayList("Cà phê đen", "Cà phê nâu", "Cà phê cốt dừa");
+    ObservableList<String> list_unit = FXCollections.observableArrayList("Cà phê đen", "Cà phê nâu", "Cà phê cốt dừa","Bạc xỉu","Trà chanh","Trà đào cam xả","Nước cam");
     @FXML
     private Button btn_check;
     @FXML
@@ -76,7 +76,7 @@ public class PanelorderController implements Initializable {
     private void onClickAdd(ActionEvent event){
         if(txt_madonhang.getText().equals("")){
             order_data ord_data=new order_data();
-            ord_data.addDonhang(txt_makhachhang.getText(), "", "", txt_uudai.getText(), txt_soban.getText());
+            ord_data.addDonhang("", "", "", "", "");
             String text=ord_data.getIdDonhang();
             System.out.println(text);
             txt_madonhang.setText(text);

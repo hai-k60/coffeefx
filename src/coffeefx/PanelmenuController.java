@@ -40,7 +40,7 @@ public class PanelmenuController implements Initializable {
     ObservableList<String> list_unit_loai = FXCollections.observableArrayList("Cà Phê", "Trà","Sinh tố");
     ObservableList<String> list_unit_donvi = FXCollections.observableArrayList("Cốc", "Hộp");
     ObservableList<String> list_unit_nguyenlieu = FXCollections.observableArrayList("Bột cà phê", "Đường", "Sữa", "Bột trà");
-    ObservableList<String> list_unit_douong = FXCollections.observableArrayList("Cà phê đen", "Cà phê nâu", "Cà phê cốt dừa", "Bạc xỉu","Trà chanh","Trà đào cam xả");
+    ObservableList<String> list_unit_douong = FXCollections.observableArrayList("Cà phê đen", "Cà phê nâu", "Cà phê cốt dừa", "Bạc xỉu","Trà chanh","Trà đào cam xả","Nước cam");
 //    public void fillComboBox(){
 //        String query = "select FirstName from douong";
 //        pst = conn.pepareStatement(query);
